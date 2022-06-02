@@ -3,7 +3,7 @@ $day = Read-Host "Enter the day (01-25): "
 
 function Add-files{
     param ([string]$ext, [string]$day)
-    New-Item -Path "../Solutions/day$day.$ext"
+    New-Item -Path "../Solutions/day$day$ext"
     New-Item -Path "../Inputs/2021_$day.txt"
 }
 

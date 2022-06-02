@@ -46,3 +46,6 @@ let epsilonRate =
 
 let result1 = gammaRate * epsilonRate
 printfn "Result1: %d" result1
+
+(* TODO PART 2 *)
+
