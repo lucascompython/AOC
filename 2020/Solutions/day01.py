@@ -11,3 +11,14 @@ for a in input_data:
             break
 print(result)
 
+
+# PART 2 
+
+result = 0
+for a in input_data:
+    for b in input_data:
+        for c in input_data:
+            if a + b + c == 2020:
+                result = a * b * c
+                break
+print(result)
