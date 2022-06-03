@@ -1,6 +1,6 @@
 ## Just my AOC
 
-I am trying to solve some of the challengens in .Net languages to learn them better.
+I am trying to solve some of the challengens in .Net languages to learn them better or in other languages just to have fun.
 
 
 ## TODO's
