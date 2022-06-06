@@ -13,7 +13,7 @@ $day = Read-Host "Enter the day (01-25): "
 function Add-files{
     param ([string]$ext, [string]$day, [string]$year)
     New-Item -Path "../$year/Solutions/day$day$ext"
-    New-Item -Path "../$year/Inputs/2021_$day.txt"
+    New-Item -Path "../$year/Inputs/$year_$day.txt"
 }
 
 if (@("c#", "csx", "cs", "csharp") -contains $lang) {
