@@ -4,9 +4,10 @@ I am trying to solve some of the challengens in .Net languages to learn them bet
 
 
 ## TODO's
-[ ] - Finish part 2 of day 3
-[ ] - Finish day 4
-[ ] - Start day 5
+
+- [ ] - Finish part 2 of day 3
+- [ ] - Finish day 4
+- [ ] - Start day 5
 
 # License
 This project is licensed under the GPL3 license.
