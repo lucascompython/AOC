@@ -8,8 +8,9 @@ pub fn part_one(input: &str) -> Option<u64> {
         let num = line[1..].parse::<i64>().ok()?;
 
         match op {
-            'R' => current = (current + num) % 100,
-            'L' => current = (current + 100 - num) % 100,
+            'R' => current = (current + num).rem_euclid(100),
+            // 'L' => current = (current + 100 - num) % 100,
+            'L' => current = (current - num).rem_euclid(100),
             _ => return None,
         };
 
@@ -21,8 +22,45 @@ pub fn part_one(input: &str) -> Option<u64> {
     Some(count)
 }
 
+// '%' operator is rust is the remainder operator, not the modulo operator. This means that it can return negative numbers if the left operand is negative.
 pub fn part_two(input: &str) -> Option<u64> {
-    None
+    let mut current: i64 = 50;
+    let mut count = 0;
+    for line in input.lines() {
+        let op = line.chars().next()?;
+        let num = line[1..].parse::<i64>().ok()?;
+        let mut res = 0;
+
+        match op {
+            'R' => {
+                res = current + num;
+
+                println!("{} + {} = {}", current, num, res);
+                if res >= 100 {
+                    count += 1;
+                }
+
+                current = res.rem_euclid(100)
+            }
+            'L' => {
+                let res = current - num;
+
+                println!("{} - {} = {}", current, num, res);
+                if res < 0 {
+                    count += 1;
+                }
+
+                current = res.rem_euclid(100);
+            }
+            _ => return None,
+        };
+
+        if current == 0 {
+            count += 1;
+        }
+    }
+
+    Some(count)
 }
 
 #[cfg(test)]
